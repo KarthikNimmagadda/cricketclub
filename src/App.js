@@ -21,21 +21,29 @@ function App() {
     setShowSidebar(false);
   };
 
-  useEffect(() => async () => {
-    const response = await axios.get(
+  useEffect(() => () => {
+    axios.get(
         'https://cricketapp-e4008-default-rtdb.firebaseio.com/players.json'
-    );
-
-    const retrievedPlayers = [];
+    ).then(res => {
+      const data = res.data;
+      const retrievedPlayers = [];
     
-    for(const key in response.data) {
+      for(const key in data) {
         retrievedPlayers.push({
             id: key,
-            name: response.data[key].name,
-            dates: response.data[key].dates,
-            playerType: response.data[key].playerType
+            name: data[key].name,
+            dates: data[key].dates,
+            playerType: data[key].playerType
         })
     }
+      setPlayers(retrievedPlayers);
+  })
+  .catch(err => {
+      console.log(err);
+  });
+
+    const retrievedPlayers = [];
+
 
     setPlayers(retrievedPlayers);
 }, []); 
