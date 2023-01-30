@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cricketclub/static/css/main.5de64afb.css",
-    "main.js": "/cricketclub/static/js/main.2598172f.js",
+    "main.js": "/cricketclub/static/js/main.a18e63f1.js",
     "static/js/787.4711676d.chunk.js": "/cricketclub/static/js/787.4711676d.chunk.js",
     "index.html": "/cricketclub/index.html",
     "main.5de64afb.css.map": "/cricketclub/static/css/main.5de64afb.css.map",
-    "main.2598172f.js.map": "/cricketclub/static/js/main.2598172f.js.map",
+    "main.a18e63f1.js.map": "/cricketclub/static/js/main.a18e63f1.js.map",
     "787.4711676d.chunk.js.map": "/cricketclub/static/js/787.4711676d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5de64afb.css",
-    "static/js/main.2598172f.js"
+    "static/js/main.a18e63f1.js"
   ]
 }
