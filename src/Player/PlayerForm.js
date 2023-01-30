@@ -6,6 +6,7 @@ const PlayerForm = () => {
   const [name, setName] = useState('');
   const [playerType, setPlayerType] = useState('Batsman');
   const [error, setError] = useState('');
+  const [isSaved, setIsSaved] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,10 +25,21 @@ const PlayerForm = () => {
       console.log(response.data);
       setName('');
       setPlayerType('Batsman');
+      setIsSaved(true);
     } catch (error) {
       console.error(error);
     }
   };
+
+  const handleNameChange = (e) => {
+        setIsSaved(false);
+        setName(e.target.value);
+  };
+
+  const handlePlayerTypeChange = (e) => {
+    setIsSaved(false);
+    setPlayerType(e.target.value);
+};
 
   return (
     <div className="player-form">
@@ -37,10 +49,10 @@ const PlayerForm = () => {
                 type="text"
                 placeholder="Name"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
             />
             {error && <div className="error">{error}</div>}
-            <select value={playerType} onChange={(e) => setPlayerType(e.target.value)}>
+            <select value={playerType} onChange={handlePlayerTypeChange}>
                 <option value="">Select Player Type</option>
                 <option value="Allrounder">Allrounder</option>
                 <option value="Batsman">Batsman</option>
@@ -49,7 +61,8 @@ const PlayerForm = () => {
                 <option value="Keeper Batsman">Keeper Batsman</option>
                 <option value="Keeper Bowler">Keeper Bowler</option>
             </select>
-            <button type="submit">Add Player</button>
+            {!isSaved && <button type="submit">Add Player</button>}
+            {isSaved && <label>Created</label>}
         </form>
     </div>
   );
