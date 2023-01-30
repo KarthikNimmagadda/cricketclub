@@ -1,12 +1,11 @@
 import './Player.css';
-import React, { useState } from 'react';
 import PlayerDetails from './PlayerDetails';
 
 
 const Player = (props) => {
 
     const handleClick = () => {
-        {props.setComponent(<PlayerDetails player={props.player} />)}
+        props.setComponent(<PlayerDetails player={props.player} />)
     };
 
     return <li className="player" onClick={handleClick}>

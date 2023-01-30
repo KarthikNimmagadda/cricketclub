@@ -63,11 +63,6 @@ const Summary = (props) => {
                         <p>
                             {availabilityData.length} players available on {selectedDate}:
                         </p>
-                        {/* <ul>
-                            {availabilityData.map(player => (
-                                 <Player key={player.id} player={player} setComponent={props.setComponent}></Player>
-                            ))}
-                        </ul> */}
                         <PlayersList players={availabilityData} setComponent={props.setComponent}/>
                     </div>
                 )
