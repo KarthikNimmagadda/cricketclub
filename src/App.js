@@ -53,7 +53,7 @@ function App() {
               <div className="sidebar">
                 <ul>
                   <li onClick={() => handleSelection(<PlayersList setComponent={handleSelection} players={players}/>)}>Players List</li>
-                  <li onClick={() => handleSelection(<PlayerForm />)}>Player Form</li>
+                  <li onClick={() => handleSelection(<PlayerForm />)}>New Player</li>
                   <li onClick={() => handleSelection(<Summary setComponent={handleSelection}/>)}>Summary</li>
                 </ul>
               </div>
