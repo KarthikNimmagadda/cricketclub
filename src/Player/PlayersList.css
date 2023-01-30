@@ -1,0 +1,13 @@
+.players-list{
+    width: 25rem;
+    padding: 1.875rem;
+    top: 3rem;
+    margin: 6rem auto;
+    background: #FFF;
+    border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.13);
+}

@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.header__icon {
+    font-size: 1rem;
+    cursor: pointer;
+    top: 1rem;
+    left: 1rem;
+}
+  
+.header__title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+.header__availability {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+  
