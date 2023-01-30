@@ -42,11 +42,7 @@ function App() {
       console.log(err);
   });
 
-    const retrievedPlayers = [];
-
-
-    setPlayers(retrievedPlayers);
-}, []); 
+}, [players]); 
 
   return (
     <div className="App">
