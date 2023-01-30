@@ -21,7 +21,7 @@ function App() {
     setShowSidebar(false);
   };
 
-  useEffect(() => () => {
+  useEffect(() => {
     axios.get(
         'https://cricketapp-e4008-default-rtdb.firebaseio.com/players.json'
     ).then(res => {
